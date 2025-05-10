@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Flash Message Sign</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <div id="flash-config">
+        <input type="text" id="message-input" placeholder="Enter your message here">
+        <div id="controls">
+            <label for="speed-range">Speed:</label>
+            <input type="range" id="speed-range" min="1" max="20" value="5">
+            <label for="color-picker">Color:</label>
+            <input type="color" id="color-picker" value="#000000">
+            <button onclick="goToDisplayPage()">Start</button>
+        </div>
+    </div>
+    <div id="flash-display" style="display:none;">
+        <div id="message-display"></div>
+        <button id="back-btn" onclick="goToConfigPage()">Back</button>
+    </div>
+    <button id="home-btn" onclick="location.href='index.html'">Back to Home</button>
+</body>
+</html> 

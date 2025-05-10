@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Based Light Meter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <h1>Web-Based Light Meter</h1>
+    <div id="light-meter">
+        <video id="camera" autoplay></video>
+        <div>
+            <label for="iso">ISO:</label>
+            <input type="number" id="iso" value="100">
+        </div>
+        <div>
+            <label for="shutter">Shutter Speed (s):</label>
+            <input type="text" id="shutter" value="1/60">
+        </div>
+        <div>
+            <label for="aperture">Aperture (f/):</label>
+            <input type="number" id="aperture" value="2.8">
+        </div>
+        <div>
+            <label for="ev">EV (auto from camera):</label>
+            <input type="number" id="ev" value="" readonly>
+            <button onclick="takeEVReading()">Take Reading</button>
+        </div>
+        <div style="margin-top:10px; color:#888;">Leave one field blank to solve for it.</div>
+        <button onclick="calculateLightMeter()">Calculate</button>
+        <p id="result">Result: </p>
+    </div>
+    <button onclick="location.href='index.html'">Back to Home</button>
+</body>
+</html> 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Calibration Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+        .slide {
+            display: none;
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .active {
+            display: block;
+        }
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 5px;
+        }
+        .navigation button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .home-button {
+            margin-right: 10px;
+        }
+    </style>
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <div id="screen-calibration">
+        <div class="slide active" style="background-color: red;"></div>
+        <div class="slide" style="background-color: green;"></div>
+        <div class="slide" style="background-color: blue;"></div>
+        <div class="slide" style="background-color: black;"></div>
+        <div class="slide" style="background-color: white;"></div>
+        <div class="slide" style="background: linear-gradient(to right, black, white);"></div>
+        <div class="slide" style="background: repeating-linear-gradient(90deg, #000, #000 10px, #fff 10px, #fff 20px);"></div>
+    </div>
+    <div class="navigation">
+        <button class="home-button" onclick="location.href='index.html'">Home</button>
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+</body>
+</html> 
